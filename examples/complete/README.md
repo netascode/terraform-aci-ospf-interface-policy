@@ -1,5 +1,5 @@
 <!-- BEGIN_TF_DOCS -->
-# Scaffolding Example
+# OSPF Interface Policy Example
 
 To run this example you need to execute:
 
@@ -12,12 +12,24 @@ $ terraform apply
 Note that this example will create resources. Resources can be destroyed with `terraform destroy`.
 
 ```hcl
-module "aci_scaffolding" {
-  source = "netascode/scaffolding/aci"
+module "aci_ospf_interface_policy" {
+  source  = "netascode/ospf-interface-policy/aci"
+  version = ">= 0.0.1"
 
-  name        = "ABC"
-  alias       = "ABC-ALIAS"
-  description = "My Description"
+  tenant                  = "ABC"
+  name                    = "OSPF1"
+  description             = "My Description"
+  cost                    = "10"
+  dead_interval           = 50
+  hello_interval          = 15
+  network_type            = "p2p"
+  priority                = 10
+  lsa_retransmit_interval = 10
+  lsa_transmit_delay      = 3
+  passive_interface       = true
+  mtu_ignore              = true
+  advertise_subnet        = true
+  bfd                     = true
 }
 
 ```
