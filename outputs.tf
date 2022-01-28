@@ -1,9 +1,9 @@
 output "dn" {
-  value       = aci_rest.ospfIfPol.id
+  value       = aci_rest_managed.ospfIfPol.id
   description = "Distinguished name of `ospfIfPol` object."
 }
 
 output "name" {
-  value       = aci_rest.ospfIfPol.content.name
+  value       = aci_rest_managed.ospfIfPol.content.name
   description = "OSPF interface policy name."
 }

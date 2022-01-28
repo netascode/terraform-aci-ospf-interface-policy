@@ -1,4 +1,4 @@
-resource "aci_rest" "ospfIfPol" {
+resource "aci_rest_managed" "ospfIfPol" {
   dn         = "uni/tn-${var.tenant}/ospfIfPol-${var.name}"
   class_name = "ospfIfPol"
   content = {

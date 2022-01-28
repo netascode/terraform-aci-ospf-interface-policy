@@ -14,7 +14,7 @@ Note that this example will create resources. Resources can be destroyed with `t
 ```hcl
 module "aci_ospf_interface_policy" {
   source  = "netascode/ospf-interface-policy/aci"
-  version = ">= 0.0.1"
+  version = ">= 0.1.0"
 
   tenant                  = "ABC"
   name                    = "OSPF1"
@@ -31,6 +31,5 @@ module "aci_ospf_interface_policy" {
   advertise_subnet        = true
   bfd                     = true
 }
-
 ```
 <!-- END_TF_DOCS -->

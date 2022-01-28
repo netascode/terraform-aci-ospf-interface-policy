@@ -13,7 +13,7 @@ Location in GUI:
 ```hcl
 module "aci_ospf_interface_policy" {
   source  = "netascode/ospf-interface-policy/aci"
-  version = ">= 0.0.1"
+  version = ">= 0.1.0"
 
   tenant                  = "ABC"
   name                    = "OSPF1"
@@ -30,7 +30,6 @@ module "aci_ospf_interface_policy" {
   advertise_subnet        = true
   bfd                     = true
 }
-
 ```
 
 ## Requirements
@@ -38,13 +37,13 @@ module "aci_ospf_interface_policy" {
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
-| <a name="requirement_aci"></a> [aci](#requirement\_aci) | >= 0.2.0 |
+| <a name="requirement_aci"></a> [aci](#requirement\_aci) | >= 2.0.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aci"></a> [aci](#provider\_aci) | >= 0.2.0 |
+| <a name="provider_aci"></a> [aci](#provider\_aci) | >= 2.0.0 |
 
 ## Inputs
 
@@ -76,5 +75,5 @@ module "aci_ospf_interface_policy" {
 
 | Name | Type |
 |------|------|
-| [aci_rest.ospfIfPol](https://registry.terraform.io/providers/netascode/aci/latest/docs/resources/rest) | resource |
+| [aci_rest_managed.ospfIfPol](https://registry.terraform.io/providers/CiscoDevNet/aci/latest/docs/resources/rest_managed) | resource |
 <!-- END_TF_DOCS -->
